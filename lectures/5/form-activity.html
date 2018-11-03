@@ -8,17 +8,20 @@
 <!-- =============== Exercise 1 =================== -->
 <!-- After writing your name in input field press Enter -->
 
-<!--<input type="text" name="name">-->
-
+  <!--input type="text" name="name-->
+<!-- It just takes the input from the user and nothing happen after pressing enter -->
 
 
 <!-- =============== Exercise 2 =================== -->
 <!-- After writing your name in input field press Enter,
         check URL, is it updated ? -->
 
-<!--<form>
+<!--
+<form>
     <input type="text" name="name">
 </form>-->
+
+<!--yes url is updated  -->
 
 
 
@@ -30,7 +33,7 @@
     <input type="text" name="name">
     <input type="submit">
 </form>-->
-
+<!--No,it is different  from pressing enter as it updates the URL as well-->
 
 
 <!-- =============== Exercise 4 =================== -->
@@ -42,7 +45,7 @@
     <input type="text" name="reg">
     <input type="submit">
 </form>-->
-
+<!--no,URL changes and an 404 error shows up-->
 
 <!-- =============== Exercise 5 =================== -->
 <!-- After writing some text in input field,
@@ -52,19 +55,19 @@
     <input type="text" name="q">
     <input type="submit">
 </form>-->
+<!--it redirects you to the google.com with the searches of your entered word-->
 
 
 
 <!-- =============== Exercise 6 =================== -->
 <!-- After writing "top web language" in input field,
         press Submit button,  what is the value of q parameter in URL ? -->
-
-<!--<form action="http://www.google.com/search">
+<!--
+<form action="http://www.google.com/search">
     <input type="text" name="q">
     <input type="submit">
 </form>-->
-
-
+<!--the value of q parameter becomes q=top+web+language-->
 
 
 
@@ -78,7 +81,7 @@
     <input type="submit">
 </form>-->
 
-
+<!--the value of q becomes q=imran+khan-->
 
 <!-- =============== Exercise 8 =================== -->
 <!-- After writing your cell phone brand in input field,
@@ -87,32 +90,34 @@
         Where did the "q" parameter go ?
         (Please check in "google chrome developers tool"
         under "Network" tab )-->
-
-<!--<form action="/form-handler" method="post">
+<!--
+<form action="/form-handler" method="post">
     <input type="text" name="q">
     <input type="submit">
 </form>-->
 
+<!--the error code is 404 and and url is http://localhost:63342/form-handler-->
 
 <!-- =============== Exercise 9 =================== -->
 <!-- After writing some text in input field,
         press Submit button,  what is the value of q parameter in URL ? -->
-
-<!--<form action="/my-handling-form-page" method="get">
+<!--
+<form action="/my-handling-form-page" method="get">
     <input type="password" name="q">
     <input type="submit">
 </form>-->
+<!--the values of q parameter is same as the password we enter in the submit field.-->
 
 
 <!-- =============== Exercise 10 =================== -->
 <!-- After selecting and un-selecting checkbox,
         press Submit button,  what is the value of "g" parameter in URL
         in both cases ? -->
-
 <!--<form action="/my-handling-form-page" method="get">
     <input type="checkbox" name="g">
     <input type="submit">
 </form>-->
+<!--when the checkbox is checked the value g is g=on , if the checkbox is unchecked then there is no g in the url.-->
 
 
 
@@ -128,7 +133,8 @@
     <br>
     <input type="submit">
 </form>-->
-
+<!--the value of first 2 boxes will be g=on and h=on i.e "http://localhost:63342/my-handling-form-page?g=on&h=on"
+and q is not shown-->
 
 
 
@@ -145,6 +151,10 @@
     <input type="submit">
 </form>-->
 
+<!--is look like this = http://localhost:63342/my-handling-form-page?g=on&h=on&q=on ..
+tne value of g and h is =on-->
+
+
 
 
 
@@ -160,7 +170,7 @@
     <br>
     <input type="submit">
 </form>-->
-
+<!-- the value of q become q=two-->
 
 <!-- =============== Exercise 14 =================== -->
 <!-- After selecting 3nd radio button,
@@ -180,6 +190,7 @@
     <br><br>
     <input type="submit">
 </form>-->
+<!--the value of q becomes q =three in the URL-->
 
 
 
@@ -200,7 +211,7 @@
     <input type="submit">
 </form>-->
 
-
+<!--the value of q becomes q=two-->
 
 
 
@@ -222,6 +233,8 @@
     <br><br>
     <input type="submit">
 </form>-->
+
+<!--the value of q becomes q=the+last+three-->
 
 </body>
 </html>
