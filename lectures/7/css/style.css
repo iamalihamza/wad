@@ -1,6 +1,17 @@
-#main {
-    /* add CSS here */
+
+#main{
+    text-align: center;
+
+
+
+
 }
 .pet {
-    /* add CSS here */
+
+    max-width: 400px;
+    border: 2px dashed #fa0195;
+    margin: auto;
+    border-radius: 10px;
+    cursor:  pointer;
+    box-shadow: 5px 10px 10px grey;
 }
