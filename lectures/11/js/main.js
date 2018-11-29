@@ -74,8 +74,7 @@ function show() {
     ul.classList.add("list-group");
     for(var i=0; i<todos.length; i++){
         var li = document.createElement('li');
-        li.innerHTML  = '<li>' + todos[i].task + '</li>' +
-            '<button class="btn btn-danger">' +
+        li.innerHTML  = '<li>' + todos[i].task + '</li>' +  '<button class="btn btn-danger">' +
             '<i class="fas fa-trash-o"></i> ' +
             '<span class="d-none d-sm-inline"> Delete </span> </button>';
         li.classList.add("list-group-item");
@@ -93,7 +92,7 @@ show();
 //============================================
 
 
-/*function getTodos() {
+function getTodos() {
     var todos = [];
     var todos_str = localStorage.getItem('todo');
     if(todos_str !== null)
@@ -162,7 +161,7 @@ function isDone(e) {
     localStorage.setItem('todo',JSON.stringify(todos));
     show();
 }
-show();*/
+show();
 
 
 

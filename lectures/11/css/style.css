@@ -15,7 +15,9 @@
 #todos li button {
     float: right;
 }
+#todos {
 
+}
 .done {
     text-decoration: line-through;
 }

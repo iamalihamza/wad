@@ -1,3 +1,4 @@
+
 var questions = [{
     question : "When a user views a page containing a JavaScript program, which machine actually executes the script?",
     choices : [ "The User's machine running a Web browser",
@@ -28,12 +29,22 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
+
 }
 
 function displayCurrentQuestion() {
-    /*Write your code here */
-}
 
+    /*Write your code here */
+    var x = document.getElementById("question");
+
+    x.innerText = questions[currentQuestion].question;
+    var y = document.getElementById('choice-list');
+    for(var i=0; i<4;i++)
+    {
+        y.innerHTML += '<li>' + '<input type="radio" name="checked" >' + questions[currentQuestion].choices[i] + '</li>';
+    }
+
+}
 function resetQuiz() {
     currentQuestion = 0;
     correctAnswers = 0;
