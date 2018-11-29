@@ -21,29 +21,77 @@ var questions = [{
         "none of the above"],
     correctAnswer : 1
 }];
-
+var c=0;
 var currentQuestion = 0;
 var correctAnswers = 0;
 var quizOver = false;
 displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
-function displayNext() {
-    /*Write your code here */
+function displayNext()
+{/*Write your code here */
+    if(currentQuestion===2)
+    {
+        displayScore();
+    }
+
+    alert(correctAnswers);
+    currentQuestion++;
+   displayCurrentQuestion();
+
 
 }
 
 function displayCurrentQuestion() {
-
     /*Write your code here */
-    var x = document.getElementById("question");
 
+    var x = document.getElementById("question");
     x.innerText = questions[currentQuestion].question;
     var y = document.getElementById('choice-list');
-    for(var i=0; i<4;i++)
-    {
-        y.innerHTML += '<li>' + '<input type="radio" name="checked" >' + questions[currentQuestion].choices[i] + '</li>';
-    }
+    y.innerHTML = ' ';
+    var i=0;
+        y.innerHTML += '<li>' + '<input id="opt1" type="radio" name="checked" value="0">' + questions[currentQuestion].choices[i] + '</li>';
+        i++;
+        y.innerHTML += '<li>' + '<input id="opt2" type="radio" name="checked" value="1">' + questions[currentQuestion].choices[i] + '</li>';
+        i++;
+        y.innerHTML += '<li>' + '<input id="opt3" type="radio" name="checked" value="2">' + questions[currentQuestion].choices[i] + '</li>';
+        i++;
+        y.innerHTML += '<li>' + '<input id="opt4" type="radio" name="checked" value="3">' + questions[currentQuestion].choices[i] + '</li>';
+    //var type = document.getElementsByName("radio");
 
+    if(document.getElementById("opt1").checked)
+     {
+        if(questions[currentQuestion].correctAnswer === document.getElementById("opt1").value)
+        {
+            correctAnswers++;
+        }
+
+    }
+    else if(document.getElementById("opt2").checked)
+    {
+        if(questions[currentQuestion].correctAnswer === document.getElementById("opt2").value)
+        {
+            correctAnswers++;
+        }
+
+    }
+    else if(document.getElementById("opt3").checked)
+    {
+        if(questions[currentQuestion].correctAnswer === document.getElementById("opt3").value)
+        {
+            correctAnswers++;
+        }
+    }
+    else if(document.getElementById("opt4").checked)
+    {
+        if(questions[currentQuestion].correctAnswer === document.getElementById("opt4").value)
+        {
+            correctAnswers++;
+        }
+
+    }
+    else
+    {
+    }
 }
 function resetQuiz() {
     currentQuestion = 0;
