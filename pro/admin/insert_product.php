@@ -12,6 +12,9 @@
             font-family: 'Old Standard TT', serif;
         }
     </style>
+    <?php
+    require "functions2.php";
+    ?>
 </head>
 <body>
 <div class="container">
@@ -38,12 +41,10 @@
                         <div class="input-group-text"><i class="fas fa-list-alt"></i></div>
                     </div>
                     <select class="form-control" id="pro_cat" name="pro_cat">
-                        <option>Select Category</option>
-                        <option>Mobile</option>
-                        <option>Laptop</option>
-                        <option>Tablet</option>
-                        <option>Watch</option>
-                        <option>Camera</option>
+                        <option> <a class='nav-link'  href='#'>Select Category</a> </option>
+                        <?php
+                        getCats();
+                        ?>
                     </select>
                 </div>
             </div>
@@ -58,13 +59,10 @@
                         <div class="input-group-text"><i class="fas fa-stamp"></i></div>
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
-                        <option>Select Brand</option>
-                        <option>Apple</option>
-                        <option>Samsung</option>
-                        <option>Oppo</option>
-                        <option>Dell</option>
-                        <option>HP</option>
-                        <option>Sony</option>
+                        <option> <a class='nav-link'  href='#'>Select Brand</a> </option>
+                        <?php
+                        getBrands();
+                        ?>
                     </select>
                 </div>
             </div>
