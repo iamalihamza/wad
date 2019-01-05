@@ -15,7 +15,7 @@
     <?php
     require "functions2.php";
     ?>
-</head> 
+</head>
 <body>
 <div class="container">
     <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span> Product </h1>
