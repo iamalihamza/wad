@@ -12,14 +12,44 @@
             font-family: 'Old Standard TT', serif;
         }
     </style>
+
     <?php
     require "functions2.php";
+
+    if(!$con)
+    {
+        echo "Not connected";
+    }
+    if(!mysqli_select_db($con,'cat_db'))
+    {
+        echo "DB not selected";
+    }
+        $p_title = $_POST['pro_title'];
+        $p_cat = $_POST['pro_cat'];
+        $p_brand = $_POST['pro_brand'];
+        $p_price = $_POST['pro_price'];
+        $p_desc = $_POST['pro_desc'];
+        $p_kw = $_POST['pro_kw'];
+
+        $insertProQ = "INSERT INTO products (p_title,p_cat,p_brand,p_price,p_desc,p_kw) 
+                        VALUES ('$p_title','$p_cat','$p_brand','$p_price','$p_desc','$p_kw')";
+
+        if(!mysqli_query($con,$insertProQ))
+        {
+            echo "not inserted";
+        }
+        else
+        {
+            echo "inserted";
+        }
+
     ?>
+
 </head>
 <body>
 <div class="container">
     <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span> Product </h1>
-    <form>
+    <form action="insert_product.php" method="post">
         <div class="row">
             <div class="">
                 <label for="pro_title" class="float-md-right"> <span class="d-sm-none d-md-inline"> Product </span> Title:</label>
