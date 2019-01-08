@@ -42,7 +42,6 @@
         {
             echo "inserted";
         }
-
     ?>
 
 </head>
